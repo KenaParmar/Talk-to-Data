@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #020617;
+    color: #e2e8f0;
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; 
+}
+
+/* Markdown styling overrides */
+.prose-dark {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.prose-dark p {
+  margin-bottom: 1.25rem;
+}
+.prose-dark p:last-child {
+  margin-bottom: 0;
+}
+.prose-dark strong {
+  color: #f8fafc;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.prose-dark ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+.prose-dark ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose-dark ul li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #8b5cf6;
+  font-size: 0.8rem;
+}
+.prose-dark ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.prose-dark li {
+  margin-bottom: 0.5rem;
+}
+.prose-dark h1, .prose-dark h2, .prose-dark h3 {
+  color: #f8fafc;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose-dark h2 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 0.5rem;
+}
+.prose-dark h3 {
+  font-size: 1.1rem;
+  color: #a78bfa;
+}
+.prose-dark a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+.prose-dark table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.prose-dark th, .prose-dark td {
+  border: 1px solid #334155;
+  padding: 0.75rem;
+  text-align: left;
+}
+.prose-dark th {
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-weight: 600;
+}
